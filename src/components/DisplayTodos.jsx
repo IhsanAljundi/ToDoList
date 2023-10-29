@@ -30,19 +30,19 @@ const DisplayTodos = (props) => {
       <ul>
         {props.todos.length > 0 && sort === 'active'
           ? props.todos.map((item) => {
-              return item.completed === false && <TodoItem key={TodoItem.id} item={item} removeTodo={props.removeTodo} updateTodo={props.updateTodo} completeTodo={props.completeTodo} />;
+              return item.completed === false && <TodoItem key={item.id} item={item} removeTodo={props.removeTodo} updateTodo={props.updateTodo} completeTodo={props.completeTodo} />;
             })
           : null}
         {/*item complete*/}
         {props.todos.length > 0 && sort === 'completed'
           ? props.todos.map((item) => {
-              return item.completed === true && <TodoItem key={TodoItem.id} item={item} removeTodo={props.removeTodo} updateTodo={props.updateTodo} completeTodo={props.completeTodo} />;
+              return item.completed === true && <TodoItem key={item.id} item={item} removeTodo={props.removeTodo} updateTodo={props.updateTodo} completeTodo={props.completeTodo} />;
             })
           : null}
         {/*all item*/}
         {props.todos.length > 0 && sort === 'all'
           ? props.todos.map((item) => {
-              return <TodoItem key={TodoItem.id} item={item} removeTodo={props.removeTodo} updateTodo={props.updateTodo} completeTodo={props.completeTodo} />;
+              return <TodoItem key={item.id} item={item} removeTodo={props.removeTodo} updateTodo={props.updateTodo} completeTodo={props.completeTodo} />;
             })
           : null}
       </ul>
